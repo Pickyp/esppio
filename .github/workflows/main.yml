@@ -40,8 +40,7 @@ jobs:
         run: ceedling test:all
       # Publish results
       - name: JUnit Report Action
-        # You may pin to the exact commit or the version.
-        # uses: mikepenz/action-junit-report@79fbbf865c1563b36a1ccb67b16fce2b2da90916
+        if: always()
         uses: mikepenz/action-junit-report@v3.1.0-b01
         with:
           # Xml report paths in glob format
