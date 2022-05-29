@@ -11,8 +11,3 @@ void test_sum(void)
     // ASSERT
     TEST_ASSERT_EQUAL(3, actual);
 }
-
-void test_sum_fail(void)
-{
-    TEST_ASSERT_EQUAL(true,false);
-}
