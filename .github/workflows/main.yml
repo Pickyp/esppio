@@ -31,7 +31,7 @@ jobs:
         run: gem install ceedling
       # Install pio
       - name: Install pio-cli
-        run: pip install -U
+        run: pip install -U platformio
       # Get pio deps
       - name: Get pio Dependencies
         run: pio run
