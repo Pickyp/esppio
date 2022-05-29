@@ -43,5 +43,6 @@ jobs:
         if: always()
         uses: mikepenz/action-junit-report@v3.1.0-b01
         with:
+          annotate_only: true
           # Xml report paths in glob format
           report_paths: "**/report_junit.xml"
