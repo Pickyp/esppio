@@ -19,13 +19,14 @@ Native tests are run via ceedling.These tests generate the following.
 ## Reports
 To generate a test report run the following.
 ```bash
-ceedling test:build_only
+ceedling test:all
 ```
 The reports will be found under `build/artifacts/test`
 - `report_junit.xml`: A report in the junit schema.
 - `report.xml`: An xml based test report used by the ceedling test explorer.
 
 ## Tools
+- [Ruby 3.0.4](https://www.ruby-lang.org/en/) Used by ceedling.
 - [Platformio](): Used for building/debugging embedded firmware.
 - [Ceedling](http://www.throwtheswitch.org/ceedling): Used for project generation, unit-testing(unity) and mocking(cMock).
 - [GDB](https://sourceforge.net/projects/mingw/): Used for debugging tests.This can be install on windows by using mingw.
@@ -58,3 +59,23 @@ The following config must be added to your launch.json file in order for the cee
             ]
 }
 ```
+## Testing reporting in CI
+
+The following tools will need to be installed on your CI machine
+- [pio-cli](https://docs.platformio.org/en/latest/core/installation.html)
+- [Ruby 3.0.4](https://www.ruby-lang.org/en/)
+- [Ceedling](http://www.throwtheswitch.org/ceedling)
+
+### Step 1
+Retrieve pio dependencies
+```bash
+pio run
+```
+### Step 2
+Run tests and generate reports
+```bash
+ceedling test:all
+```
+### Step 3
+Retrieve the junit test report.<br>
+`build/artifacts/test/report_junit.xml`
