@@ -1,6 +1,6 @@
 
 # Tests
-[![Tests](https://github.com/Pickyp/esppio/actions/workflows/main.yml/badge.svg)](https://github.com/Pickyp/esppio/actions/workflows/main.yml)
+[![Tests](https://github.com/Pickyp/esppio/actions/workflows/main.yml/badge.svg)](https://github.com/Pickyp/esppio/actions/workflows/main.yml)<br>
 Tests are split into two directories
 - `test_embedded` Tests that will be run against the embedded hardware
 - `test_native` Tests that will be run on a local machine
